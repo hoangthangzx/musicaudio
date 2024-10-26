@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#02051F">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/audio_editor"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/inter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView2"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="@string/which_function_do_you_want_to_use"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <LinearLayout
+
+        android:id="@+id/constraintLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView2">
+
+        <LinearLayout
+            android:id="@+id/mp3cutter"
+            android:background="@drawable/itemhome"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+<ImageView
+    android:id="@+id/imagemp3"
+    android:layout_marginTop="6dp"
+    android:src="@drawable/cutterxanh"
+    android:layout_width="32dp"
+    android:layout_height="32dp"
+ android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/mp3"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/mp3_cutter"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/merge"
+           android:layout_marginHorizontal="14dp"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+android:id="@+id/imgme"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/merge"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/me"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/merge"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/equalizer"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/imge"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/equalizer"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/eq"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/equalizer"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/constraint2"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+
+        <LinearLayout
+            android:id="@+id/mixer"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+android:id="@+id/imgmi"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/mixer"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/mi"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/mixer"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="14dp"
+            android:id="@+id/speed"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/imgspeed"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/speed"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/sp"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/speed"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/volume"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgvalume"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/valume" />
+            <TextView
+                android:id="@+id/va"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                    android:text="@string/volume"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_marginTop="14dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="57dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraint2">
+
+        <LinearLayout
+            android:layout_marginHorizontal="7dp"
+            android:id="@+id/voichanger"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/imgvoichanger"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/voidchanger"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/voidchan"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/voice_changer"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginHorizontal="7dp"
+            android:id="@+id/audiototex"
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/imgaudiototex"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/audiototex"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/audio"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/audio_to_text"
+                android:textSize="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/con"
+        android:layout_marginBottom="70dp"
+        android:textSize="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_started"
+        app:layout_constraintBottom_toTopOf="@+id/adLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/adLayout"
+        android:layout_width="414dp"
+        android:layout_height="204dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

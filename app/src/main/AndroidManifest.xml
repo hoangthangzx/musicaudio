@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:targetApi="TIRAMISU" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ST046_AudioEditorandMusicEditor"
+        tools:targetApi="31">
+<!--        <activity-->
+<!--            android:name="com.example.Home.MainActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name="com.example.merge.MergeActivity"-->
+<!--            android:exported="false" />-->
+        <activity
+            android:name="com.example.mixer.MixerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mixer.selecadd"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mixer.SlectaudioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mixer.selecback"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mixer.Mixer2Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.SuccesallActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cutter.CutaudioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.merge.MergeActivity2"
+            android:exported="false" />
+        <activity
+            android:name="com.example.cutter.Cutaudio2Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.speed.SpeedActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.selectaudio.Selectaudio2Activity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.mixer.SelectActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.equazer.equazerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.volume.VolumeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.voidchanger.VoidChangerActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.myaudio.MyaudioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.selectaudio.SlectaudioActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.audiotex.AudiotexActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.SuccesActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.Language.LanguageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.language1.Language1Activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.Home.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.intro.IntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.SettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.PermissonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.interect.InterectActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name="com.example.cutter.cuttet" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="com.example.Screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

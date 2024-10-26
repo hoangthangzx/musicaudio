@@ -1,0 +1,69 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+
+android {
+    namespace 'com.example.st046_audioeditorandmusiceditor'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.st046_audioeditorandmusiceditor"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            resources.excludes.add("META-INF/*")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    viewBinding {
+        enabled = true
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation 'com.mpatric:mp3agic:0.9.1'
+
+    implementation 'com.arthenica:mobile-ffmpeg-audio:4.4'
+    implementation('com.google.android.exoplayer:exoplayer-core:2.19.1')
+    implementation 'com.github.ome450901:SimpleRatingBar:1.5.1'
+    implementation("com.google.android.material:material:1.12.0")
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation libs.core.ktx
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'com.airbnb.android:lottie:6.5.2'
+    implementation 'com.tbuonomo:dotsindicator:5.1.0'
+    implementation  'com.github.massoudss:waveformSeekBar:5.0.2'
+    implementation 'com.github.lincollincol:amplituda:2.2.2'
+
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.graphics.core
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
